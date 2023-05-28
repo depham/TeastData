@@ -65,7 +65,9 @@
             // Cột Giờ
             const timeCell = document.createElement('td');
             const time = new Date(item.Time);
-            const formattedTime = time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            const hours = time.getHours();
+            const minutes = time.getMinutes();
+            const formattedTime = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
             timeCell.textContent = formattedTime;
             
             row.appendChild(timeCell);
