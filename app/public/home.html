@@ -67,11 +67,12 @@
             const time = new Date(item.Time);
             const formattedTime = time.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
             timeCell.textContent = formattedTime;
+            
             row.appendChild(timeCell);
             // Cột Ngày
             const dateCell = document.createElement('td');
             const date = new Date(item.Date);
-            const formattedDate = date.toLocaleDateString();
+            const formattedDate = date.toLocaleDateString([], { year: 'numeric', month: '2-digit', day: '2-digit' });
             dateCell.textContent = formattedDate;
             row.appendChild(dateCell);
             // Cột MachineID
