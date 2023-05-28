@@ -45,12 +45,18 @@
 
   <script>
     // Sử dụng JavaScript để fetch dữ liệu từ API và cập nhật vào bảng
-    fetch('https://teast-data.vercel.app/dulieutron/list') // Thay đổi đường dẫn '/api/data' thành đường dẫn API của bạn
+    
+    fetch('/api/data')
       .then(response => response.json())
       .then(data => {
-        const dataList = document.getElementById('dataList');
-        data.forEach(item => {
-          const row = document.createElement('tr');
+    const result = data.result;
+    if (Array.isArray(result)) {
+      const dataList = document.getElementById('dataList');
+      result.forEach(item => {
+        // ...
+        // Tạo các thẻ <td> và thêm dữ liệu vào bảng
+        // ...
+        const row = document.createElement('tr');
           row.innerHTML = `
             <td>${item.DuLieuTronID}</td>
             <td>${item.Time}</td>
@@ -67,9 +73,12 @@
             <td>${item.PV_PG}</td>
           `;
           dataList.appendChild(row);
-        });
-      })
-      .catch(error => console.error(error));
+      });
+    } else {
+      console.error('Dữ liệu không phải là một mảng:', result);
+    }
+  })
+  .catch(error => console.error(error));
   </script>
 </body>
 </html>
