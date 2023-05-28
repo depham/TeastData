@@ -43,7 +43,7 @@
     </tbody>
   </table>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js">
+  <script>
     // Sử dụng JavaScript để fetch dữ liệu từ API và cập nhật vào bảng
     
     fetch('https://teast-data.vercel.app/dulieutron/list')
@@ -64,11 +64,11 @@
 
             // Cột Giờ
             const timeCell = document.createElement('td');
-            const time = new Date(item.Time);
-            console.log(time);
-            const hours = time.getHours();
-            const minutes = time.getMinutes();
-            const formattedTime = moment(item.Time).format('HH:mm');
+            var dateObj = new Date(item.Time);
+            console.log(dateObj);
+            var hours = dateObj.getHours();
+            var minutes = dateObj.getMinutes();
+            var formattedTime = hours + ':' + (minutes < 10 ? '0' : '') + minutes + ' ' + (hours >= 12 ? 'PM' : 'AM');
             timeCell.textContent = formattedTime;
             row.appendChild(timeCell);
             //console.log(formattedTime); 
