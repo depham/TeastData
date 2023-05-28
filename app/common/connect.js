@@ -1,10 +1,10 @@
 var mysql = require('mysql');
 
 var connection = mysql.createConnection({
-    host: 'sql106.epizy.com',
-    user: 'epiz_34303550',
-    password: '',
-    database: 'epiz_34303550_new_testdata'
+    host: 'bzjwg60wxaoynthft7sl-mysql.services.clever-cloud.com',
+    user: 'uuerpr6bebufqb68',
+    password: 'I9Lp6fqdgCXcZKludcbK',
+    database: 'bzjwg60wxaoynthft7sl'
 });
 
 connection.connect(function(err){
