@@ -41,33 +41,6 @@
     </tbody>
   </table>
 
-  <script>
-    // Sử dụng JavaScript để fetch dữ liệu từ API và cập nhật vào bảng
-    fetch('https://teast-data.vercel.app/dulieutron/list') // Thay đổi đường dẫn '/api/data' thành đường dẫn API của bạn
-      .then(response => response.json())
-      .then(data => {
-        const dataList = document.getElementById('dataList');
-        data.forEach(item => {
-          const row = document.createElement('tr');
-          row.innerHTML = `
-            <td>${item.id}</td>
-            <td>${item.gio}</td>
-            <td>${item.ngay}</td>
-            <td>${item.may}</td>
-            <td>${item.tenHang}</td>
-            <td>${item.sttm}</td>
-            <td>${item.mCe1}</td>
-            <td>${item.pvCe1}</td>
-            <td>${item.mCe2}</td>
-            <td>${item.pvCe2}</td>
-            <td>${item.mCe3}</td>
-            <td>${item.pvCe3}</td>
-            <td>${item.pvPg}</td>
-          `;
-          dataList.appendChild(row);
-        });
-      })
-      .catch(error => console.error(error));
-  </script>
+  
 </body>
 </html>
