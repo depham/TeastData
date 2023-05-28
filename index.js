@@ -12,7 +12,7 @@ require('./app/routers/home.router')(app);
 require('./app/routers/dulieutron.router')(app);
 
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/public/index.html');
+    res.sendFile(__dirname + '/../public/index.html');
 });
 
 app.listen(3000, function(){
