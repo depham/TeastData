@@ -9,5 +9,5 @@ exports.about = function(req, res){
 }
 
 exports.show = function(req, res){
-    res.sendFile(path.join(__dirname, '../public', 'index.html'));
+    res.sendFile(path.join(__dirname, '../public', 'home.html'));
 }
