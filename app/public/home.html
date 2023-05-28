@@ -52,19 +52,19 @@
         data.forEach(item => {
           const row = document.createElement('tr');
           row.innerHTML = `
-            <td>${item.id}</td>
-            <td>${item.gio}</td>
-            <td>${item.ngay}</td>
-            <td>${item.may}</td>
-            <td>${item.tenHang}</td>
-            <td>${item.sttm}</td>
-            <td>${item.mCe1}</td>
-            <td>${item.pvCe1}</td>
-            <td>${item.mCe2}</td>
-            <td>${item.pvCe2}</td>
-            <td>${item.mCe3}</td>
-            <td>${item.pvCe3}</td>
-            <td>${item.pvPg}</td>
+            <td>${item.DuLieuTronID}</td>
+            <td>${item.Time}</td>
+            <td>${item.Date}</td>
+            <td>${item.MachineID}</td>
+            <td>${item.NameProduct}</td>
+            <td>${item.STTM}</td>
+            <td>${item.M_CE1}</td>
+            <td>${item.PV_CE1}</td>
+            <td>${item.M_CE2}</td>
+            <td>${item.PV_CE2}</td>
+            <td>${item.M_CE3}</td>
+            <td>${item.PV_CE3}</td>
+            <td>${item.PV_PG}</td>
           `;
           dataList.appendChild(row);
         });
