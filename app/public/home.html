@@ -69,8 +69,8 @@
             const minutes = time.getMinutes();
             const formattedTime = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
             timeCell.textContent = formattedTime;
-            
             row.appendChild(timeCell);
+            console.log(formattedTime); 
             // Cột Ngày
             const dateCell = document.createElement('td');
             const date = new Date(item.Date);
