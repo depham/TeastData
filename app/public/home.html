@@ -43,7 +43,7 @@
     </tbody>
   </table>
 
-  <script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js">
     // Sử dụng JavaScript để fetch dữ liệu từ API và cập nhật vào bảng
     
     fetch('https://teast-data.vercel.app/dulieutron/list')
@@ -68,7 +68,7 @@
             console.log(time);
             const hours = time.getHours();
             const minutes = time.getMinutes();
-            const formattedTime = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+            const formattedTime = moment(item.Time).format('HH:mm');
             timeCell.textContent = formattedTime;
             row.appendChild(timeCell);
             //console.log(formattedTime); 
