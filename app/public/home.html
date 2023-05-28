@@ -45,7 +45,7 @@
 
   <script>
     // Sử dụng JavaScript để fetch dữ liệu từ API và cập nhật vào bảng
-    fetch('/api/data') // Thay đổi đường dẫn '/api/data' thành đường dẫn API của bạn
+    fetch('https://teast-data.vercel.app/dulieutron/list') // Thay đổi đường dẫn '/api/data' thành đường dẫn API của bạn
       .then(response => response.json())
       .then(data => {
         const dataList = document.getElementById('dataList');
