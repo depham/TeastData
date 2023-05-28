@@ -5,5 +5,7 @@ module.exports = function(router){
     router.get("/", homeController.home);
     
     router.get("/about", homeController.about);
+
+    router.get("/show", homeController.show);
     
 }
