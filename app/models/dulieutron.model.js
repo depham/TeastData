@@ -35,7 +35,7 @@ DuLieuTron.get_all = function(result){
 
 DuLieuTron.getByID = function(id, result){
 
-    db.query("SELECT *FROM dulieutron WHERE DuLieuTronID = ?", id, function(err, dulieutron){
+    db.query("SELECT *FROM dulieutron WHERE MachineID = ?", id, function(err, dulieutron){
 
         if(err){
             result(null);
